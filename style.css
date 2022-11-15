@@ -1,0 +1,154 @@
+html{ padding:0; margin:0;}
+body { margin:0; padding:0; width:100%; color:#959595;border: 2px solid black;
+     font:normal 12px/2.0em Sans-Serif; overflow: hidden;} 
+
+#homepage{height: 100%; width: 100%; }
+
+#navbar, #footer, #content, #rightside, #leftside { margin:0; padding:0;}
+
+  
+/*#navbar{min-height: 15%;}*/
+
+/*=================HEADER===========================*/      
+/* Navbar */
+#navbar { background:#D7C0AE; width: 100%;
+          position: sticky; top: 0; right: 0;
+          margin:0 auto; padding:0px 0 0; height:130px;
+          min-height: 15%; float:left;overflow: hidden;}
+
+/* Logo */
+#logo { padding:10px; width:auto; float:left;}
+#logo a, a:hover { color:brown; text-decoration:none;}
+#logo span { color:#d3d3f9;}
+   
+/* Navbar Menu */
+#navbar ul { list-style:none; padding:0; height:20px; float:left;}
+#navbar ul li { margin:0; padding:0 0 0 8px; float:left;}
+#navbar ul li a { display:block; margin:0; padding:8px 10px; color:red; text-decoration:none;}
+#navbar ul li.active a, #navbar ul li a:hover { color: royalblue;}
+
+
+/*========= CSS dropdown ========*/
+.outer li{position:relative;display:inline-block;margin-right:10px;
+}
+.outer li a, .inner li a{
+  text-decoration:none;
+}
+.inner{position:absolute;display:none;width:50px;padding:2px 2px;
+  margin-top:0px;border-radius:0px 5px 5px 5px;
+}
+.inner li{padding:2px 2px;
+}
+.inner li a{font-size:medium;
+}
+.inner li:hover a{font-size:small;color:cyan;border-bottom:olive 1px solid;
+  border-radius:5px;background-color:black;
+}
+.outer li:hover .inner{display:inline-flex;
+}
+
+/*======================BODY=====================*/
+
+#content{margin:0 auto; padding:0; background:#fff;
+        height: 75%; }
+
+#leftside {margin: 0; padding:5px; float:left; width: 15%;border: 2px solid black;
+           height: 600px;background-color: white;}/*c2e5e0;}
+           /*background-color: #f3f7f6;}*/
+#leftside .widget { margin:0 0 12px; padding:8px 8px 8px 13px;
+                   line-height:1.4em; position: fixed;}
+#leftside .widget h3 a { text-decoration:none;}
+#leftside .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
+#leftside .widget ul li { margin:0; padding:0;}
+#leftside .widget ul li { padding:4px 0; width:185px;}
+#leftside .widget ul li a { color:darkgreen; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
+#leftside .widget ul li a:hover { color:brown; font-weight:bold; text-decoration:none;}
+
+
+
+/* Rightside */
+#rightside { margin:0; padding:0; float:left; width: 85%;border: 2px solid black;
+              height: 500px; overflow-y: scroll; background-color: white;}
+#rightside .article { margin:0; padding: 0;}/*0 0 24px; padding:10px 10px 20px 10px;}
+
+            
+/*===============FOOTER=====================================*/
+#footer { background: #D7C0AE; color: white; width: 100%;
+          min-height: 70px; padding: 5px; overflow: hidden;
+          position: sticky; bottom: 0; right: 0;}     
+      
+/* Clear */
+/*.clr { clear:both; padding:0; margin:0; width:100%;
+       font-size:0px; line-height:0px;}replaced by 
+       overflow: hidden in navbar and footer*/
+
+/*========= Dropdown  ==============*/
+/* dropdown button */
+.dropbtn {
+  width: 80px;
+  border-radius: 5px;
+  background-color: lightseagreen;
+  color: brown;
+  padding: 5px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* dropdown content */
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* each content div */
+.dropdown-content div {
+  padding: 5px 5px;
+}
+
+.dropdown-content a:hover {
+  color: black;
+  background-color: #c2e5e0;
+  font-size: 15px;
+}
+
+/* Highlight dropdown options on hover */
+.dropdown-content div:hover {
+  background-color: #eaeaea;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Highlight dropdown button when dropdown menu is open */
+.dropdown:hover .dropbtn {
+  /*background-color: #474885;*/
+  background-color: lightslategrey;
+}
+
+            
+            
+/*==========================*/
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+  #navbar{width: 100%; height: 150px;}
+  #leftside{width: 100%; font-size: 2.5vw;
+    height: 70px; position: relative;}
+  #leftside .widget{position: relative;}
+  #leftside .widget .dropdownbox{display: flex;
+   flex-flow: row wrap; margin: 0, 5px;}
+  #rightside{width: 100%; font-size: 2.5vw;
+    overflow-y: scroll; height: 500px;}
+
+  body{min-height: 100%;height: auto; height: 800px;}
+
+}
